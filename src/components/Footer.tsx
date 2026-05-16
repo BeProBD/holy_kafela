@@ -31,7 +31,7 @@ function BackgroundMosque() {
   return (
     <svg
       aria-hidden="true"
-      className="pointer-events-none absolute bottom-0 right-[8%] hidden h-[420px] w-[520px] text-[#172636] opacity-55 lg:block"
+      className="pointer-events-none absolute bottom-0 right-[8%] hidden h-[420px] w-[520px] text-[#04122f] opacity-55 lg:block"
       fill="currentColor"
       viewBox="0 0 520 420"
     >
@@ -84,8 +84,8 @@ function LinkColumn({ title, links }: { title: string; links: string[] }) {
 export function Footer() {
   return (
     <footer className="relative overflow-hidden text-white">
-      <div className="relative bg-[#263747]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(255,255,255,0.08),transparent_7%),radial-gradient(circle_at_32%_68%,rgba(255,255,255,0.06),transparent_6%),radial-gradient(circle_at_88%_18%,rgba(255,255,255,0.07),transparent_8%),linear-gradient(90deg,rgba(20,37,53,0.65),rgba(38,55,71,0.9))]" />
+      <div className="relative bg-[var(--midnight)]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(246,217,120,0.16),transparent_7%),radial-gradient(circle_at_32%_68%,rgba(255,255,255,0.06),transparent_6%),radial-gradient(circle_at_88%_18%,rgba(212,175,55,0.13),transparent_8%),linear-gradient(90deg,rgba(4,18,47,0.8),rgba(18,60,140,0.72))]" />
         <div className="absolute inset-0 pattern-stars opacity-35" />
         <BackgroundMosque />
 
@@ -147,7 +147,7 @@ export function Footer() {
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/18 bg-white/8 text-white/78 transition hover:-translate-y-0.5 hover:bg-white hover:text-[#263747]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/18 bg-white/8 text-white/78 transition hover:-translate-y-0.5 hover:bg-[var(--gold)] hover:text-[var(--midnight)]"
                 >
                   <Icon className="h-4.5 w-4.5" />
                 </a>
@@ -170,7 +170,7 @@ export function Footer() {
                 href="https://it.bepro.com.bd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-[#47D8B5] underline decoration-white/35 underline-offset-2 transition hover:text-white hover:decoration-white"
+                className="font-semibold text-[var(--gold-soft)] underline decoration-white/35 underline-offset-2 transition hover:text-white hover:decoration-white"
               >
                 BePro IT
               </a>

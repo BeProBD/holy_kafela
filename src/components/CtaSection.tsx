@@ -46,7 +46,7 @@ export function CtaSection() {
             </a>
             <a
               href="tel:+8801815380600"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-to-r from-[var(--gold)] to-[var(--gold-soft)] text-[var(--midnight)] font-medium hover:scale-[1.03] transition"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-[var(--primary)] text-white font-medium hover:scale-[1.03] transition"
             >
               <Calendar className="size-5" />
               Book Free Consultation

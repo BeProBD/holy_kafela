@@ -42,20 +42,20 @@ export function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-[#F6FAF8] py-20">
+    <section id="testimonials" className="relative overflow-hidden bg-cream py-20">
       {/* subtle bg */}
       <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-emerald-100/40 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-teal-100/30 blur-3xl" />
+        <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[var(--primary)]/12 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[var(--gold)]/16 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8">
         {/* heading */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-white px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--gold)]/25 bg-white px-4 py-2">
+            <span className="h-2 w-2 rounded-full bg-[var(--gold)]" />
 
-            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--primary)]">
               Testimonials
             </span>
           </div>
@@ -66,27 +66,27 @@ export function Testimonials() {
         </div>
 
         {/* card */}
-        <div className="mx-auto mt-12 max-w-4xl px-4 lg:px-0">
-          <div className="relative flex items-center gap-4 md:gap-6">
+        <div className="mx-auto mt-10 max-w-4xl sm:mt-12 sm:px-4 lg:px-0">
+          <div className="relative flex flex-col gap-5 sm:gap-6 md:flex-row md:items-center">
             {/* Left button */}
             <button
               onClick={handlePrev}
-              className="flex-shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-600 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--primary)] shadow-md transition-all duration-300 hover:bg-[var(--gold)]/15 hover:shadow-lg md:flex"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-6 h-6 md:w-7 md:h-7" />
+              <ChevronLeft className="h-7 w-7" />
             </button>
 
             {/* Card */}
-            <div className="relative flex flex-col h-[400px] flex-1 overflow-hidden rounded-[30px] border border-emerald-100 bg-white px-7 py-8 shadow-[0_12px_40px_rgba(15,23,42,0.08)] md:px-10">
+            <div className="relative flex min-h-[420px] flex-1 flex-col overflow-hidden rounded-[24px] border border-[var(--gold)]/25 bg-white px-5 py-7 shadow-[0_12px_40px_rgba(15,23,42,0.08)] sm:min-h-[390px] sm:rounded-[30px] sm:px-7 sm:py-8 md:px-10">
               <div className="flex items-center justify-between flex-shrink-0">
                 <div className="flex gap-1">
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} className="h-4 w-4 fill-emerald-500 text-emerald-500" />
+                    <Star key={index} className="h-4 w-4 fill-[var(--gold)] text-[var(--gold)]" />
                   ))}
                 </div>
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--secondary)] text-[var(--primary)]">
                   <Quote className="h-5 w-5" />
                 </div>
               </div>
@@ -113,11 +113,11 @@ export function Testimonials() {
                     }}
                     className="w-full"
                   >
-                    <blockquote className="mt-6 font-display text-[1.45rem] leading-[1.5] tracking-[-0.03em] text-slate-800 md:text-[1.8rem]">
+                    <blockquote className="mt-6 font-display text-[1.35rem] leading-[1.45] tracking-[-0.03em] text-slate-800 sm:text-[1.55rem] md:text-[1.8rem]">
                       “{testimonial.text}”
                     </blockquote>
 
-                    <div className="mt-7 border-t border-emerald-100 pt-5">
+                    <div className="mt-7 border-t border-[var(--gold)]/20 pt-5">
                       <div className="font-semibold text-slate-900">{testimonial.name}</div>
 
                       <div className="mt-1 text-sm text-slate-500">{testimonial.role}</div>
@@ -127,7 +127,7 @@ export function Testimonials() {
               </div>
 
               {/* progress */}
-              <div className="mt-6 h-[3px] overflow-hidden rounded-full bg-emerald-100 flex-shrink-0">
+              <div className="mt-6 h-[3px] overflow-hidden rounded-full bg-[var(--secondary)] flex-shrink-0">
                 <motion.div
                   key={active}
                   initial={{ width: "0%" }}
@@ -136,7 +136,7 @@ export function Testimonials() {
                     duration: 4.5,
                     ease: "linear",
                   }}
-                  className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"
+                  className="h-full rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--gold)]"
                 />
               </div>
 
@@ -147,7 +147,7 @@ export function Testimonials() {
                     key={index}
                     onClick={() => setActive(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
-                      index === active ? "w-7 bg-emerald-500" : "w-2 bg-emerald-200"
+                      index === active ? "w-7 bg-[var(--gold)]" : "w-2 bg-[var(--secondary)]"
                     }`}
                   />
                 ))}
@@ -157,11 +157,29 @@ export function Testimonials() {
             {/* Right button */}
             <button
               onClick={handleNext}
-              className="flex-shrink-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-600 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--primary)] shadow-md transition-all duration-300 hover:bg-[var(--gold)]/15 hover:shadow-lg md:flex"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-6 h-6 md:w-7 md:h-7" />
+              <ChevronRight className="h-7 w-7" />
             </button>
+
+            <div className="flex justify-center gap-3 md:hidden">
+              <button
+                onClick={handlePrev}
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--primary)] shadow-md transition-all duration-300 hover:bg-[var(--gold)]/15"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+
+              <button
+                onClick={handleNext}
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--secondary)] text-[var(--primary)] shadow-md transition-all duration-300 hover:bg-[var(--gold)]/15"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

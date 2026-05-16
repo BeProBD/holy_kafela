@@ -89,7 +89,7 @@ export function Packages() {
               className={`group relative rounded-3xl p-8 lg:p-10 border transition-all duration-500 ${
                 p.accent
                   ? "bg-gradient-to-b from-[var(--midnight)] to-[oklch(0.1_0.03_255)] text-white border-[var(--gold)]/40 lg:-translate-y-4 shadow-luxe"
-                  : "bg-white border-[var(--gold)]/15 hover:border-[var(--gold)]/40 hover:shadow-luxe hover:-translate-y-2"
+                  : "bg-white border-[var(--gold)]/50 hover:border-[var(--gold)]/40 hover:shadow-luxe hover:-translate-y-2"
               }`}
             >
               {p.accent && (
@@ -128,7 +128,7 @@ export function Packages() {
 
               <div className="text-center mb-7">
                 <div
-                  className={`font-display text-5xl ${
+                  className={`font-sans text-4xl font-semibold tracking-normal sm:text-5xl ${
                     p.accent ? "gradient-gold-text" : "text-[var(--midnight)]"
                   }`}
                 >
@@ -170,8 +170,8 @@ export function Packages() {
                 href="#contact"
                 className={`block w-full text-center py-3.5 rounded-full font-medium text-sm transition ${
                   p.accent
-                    ? "bg-gradient-to-r from-[var(--gold)] to-[var(--gold-soft)] text-[var(--midnight)] hover:scale-[1.02]"
-                    : "border border-[var(--midnight)]/15 text-[var(--midnight)] hover:bg-[var(--midnight)] hover:text-white"
+                    ? "bg-[var(--primary)] text-white hover:scale-[1.02]"
+                    : "border border-[var(--primary)]/20 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
                 }`}
               >
                 Book Now

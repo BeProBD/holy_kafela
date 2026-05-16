@@ -33,7 +33,7 @@ export function Navbar() {
     <div className="fixed inset-x-0 top-0 z-50">
       {/* TOP SUB HEADER */}
       <div
-        className={`overflow-hidden bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 text-white transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`overflow-hidden bg-[var(--primary)] text-white transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           scrolled
             ? "max-h-0 border-b-0 py-0 opacity-0"
             : "max-h-[52px] border-b border-white/10 py-1.5 opacity-100 sm:max-h-[80px] sm:py-3"
@@ -92,7 +92,7 @@ export function Navbar() {
           {/* LOGO */}
           <a href="#home" className="group flex items-center gap-3">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-emerald-200 blur-xl opacity-50" />
+              <div className="absolute inset-0 rounded-full bg-[var(--gold)]/30 blur-xl opacity-70" />
 
               <img src={logo} alt="Holy Kafela" className="relative h-12 w-auto" />
             </div>
@@ -110,11 +110,11 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="group relative text-[15px] font-medium text-slate-600 transition-all duration-300 hover:text-emerald-600"
+                className="group relative text-[15px] font-medium text-slate-600 transition-all duration-300 hover:text-[var(--primary)]"
               >
                 {l.label}
 
-                <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-emerald-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-[var(--gold)] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
@@ -124,7 +124,7 @@ export function Navbar() {
             {/* CTA */}
             <a
               href="#contact"
-              className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(16,185,129,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(16,185,129,0.38)] md:inline-flex"
+              className="hidden items-center gap-2 rounded-full bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(18,60,140,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(18,60,140,0.38)] md:inline-flex"
             >
               <Phone className="h-4 w-4" />
               Book Consultation
@@ -133,7 +133,7 @@ export function Navbar() {
             {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setOpen((v) => !v)}
-              className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-sm transition-all duration-300 hover:border-emerald-200 hover:text-emerald-600 lg:hidden"
+              className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-sm transition-all duration-300 hover:border-[var(--gold)]/50 hover:text-[var(--primary)] lg:hidden"
               aria-label="Menu"
             >
               {open ? <X size={20} /> : <Menu size={20} />}
@@ -157,7 +157,7 @@ export function Navbar() {
                     key={l.href}
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-2xl px-4 py-3 text-[15px] font-medium text-slate-700 transition-all duration-300 hover:bg-emerald-50 hover:text-emerald-600"
+                    className="rounded-2xl px-4 py-3 text-[15px] font-medium text-slate-700 transition-all duration-300 hover:bg-[var(--secondary)] hover:text-[var(--primary)]"
                   >
                     {l.label}
                   </a>
@@ -166,7 +166,7 @@ export function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setOpen(false)}
-                  className="mt-3 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3.5 text-sm font-semibold text-white shadow-lg"
+                  className="mt-3 inline-flex items-center justify-center gap-2 rounded-2xl bg-[var(--primary)] px-5 py-3.5 text-sm font-semibold text-white shadow-lg"
                 >
                   <Phone className="h-4 w-4" />
                   Book Consultation

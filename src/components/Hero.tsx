@@ -13,15 +13,15 @@ const imageTags = ["Visa", "Hotel", "Guide", "Support"];
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#F7FAF8] text-slate-900">
+    <section id="home" className="relative overflow-hidden bg-cream text-slate-900">
       <div className="absolute inset-0">
-        <div className="absolute left-[-160px] top-[-130px] h-[430px] w-[430px] rounded-full bg-emerald-200/55 blur-3xl" />
-        <div className="absolute right-[-120px] top-[120px] h-[390px] w-[390px] rounded-full bg-teal-100 blur-3xl" />
-        <div className="absolute bottom-[-140px] left-[24%] h-[320px] w-[320px] rounded-full bg-yellow-100/55 blur-3xl" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.03)_1px,transparent_1px)] bg-[size:52px_52px]" />
+        <div className="absolute left-[-160px] top-[-130px] h-[430px] w-[430px] rounded-full bg-[var(--gold)]/16 blur-3xl" />
+        <div className="absolute right-[-120px] top-[120px] h-[390px] w-[390px] rounded-full bg-[var(--gold)]/18 blur-3xl" />
+        <div className="absolute bottom-[-140px] left-[24%] h-[320px] w-[320px] rounded-full bg-[var(--gold-soft)]/25 blur-3xl" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(8,26,61,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(8,26,61,0.035)_1px,transparent_1px)] bg-[size:52px_52px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-12 pt-28 sm:pb-14 sm:pt-32 lg:px-8 lg:pb-20 lg:pt-40">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-12 pt-32 sm:pb-14 sm:pt-32 lg:px-8 lg:pb-20 lg:pt-40">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(440px,560px)]">
           <div className="mx-auto max-w-xl text-center lg:mx-0 lg:text-left">
             <motion.div
@@ -41,8 +41,8 @@ export function Hero() {
               <div className="absolute inset-0 ring-1 ring-inset ring-white/25" />
 
               <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/50 bg-white/90 px-3 py-2 text-left shadow-[0_14px_40px_rgba(15,23,42,0.12)] backdrop-blur">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100">
-                  <Star className="h-4 w-4 text-emerald-600" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--gold)]/15">
+                  <Star className="h-4 w-4 text-[var(--gold)]" />
                 </div>
                 <div>
                   <p className="text-[10px] leading-none text-slate-500">Rated</p>
@@ -54,7 +54,7 @@ export function Hero() {
 
               <div className="absolute bottom-4 left-4 right-4 text-left">
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 backdrop-blur-md">
-                  <div className="h-2 w-2 rounded-full bg-emerald-400" />
+                  <div className="h-2 w-2 rounded-full bg-[var(--gold)]" />
                   <span className="text-[10px] uppercase tracking-[0.18em] text-white/85">
                     Complete Journey Care
                   </span>
@@ -80,7 +80,7 @@ export function Hero() {
               className="font-display text-[2.75rem] font-semibold leading-[0.94] text-slate-900 sm:text-[3.25rem] lg:mt-6 lg:text-[4.85rem]"
             >
               Hajj & Umrah
-              <span className="block bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-700 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[var(--primary)] via-[var(--gold)] to-[var(--midnight)] bg-clip-text text-transparent">
                 Made Simple
               </span>
             </motion.h1>
@@ -113,7 +113,7 @@ export function Hero() {
                 href="https://wa.me/8801815380600"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(16,185,129,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(16,185,129,0.38)]"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(18,60,140,0.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(18,60,140,0.38)]"
               >
                 <MessageCircle className="h-4.5 w-4.5" />
                 WhatsApp Consultation
@@ -121,7 +121,7 @@ export function Hero() {
 
               <a
                 href="#packages"
-                className="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:text-emerald-600"
+                className="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--gold)]/50 hover:text-[var(--primary)]"
               >
                 Explore Packages
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -140,8 +140,8 @@ export function Hero() {
                   className="rounded-2xl border border-white bg-white/85 p-3 shadow-[0_10px_40px_rgba(15,23,42,0.06)] backdrop-blur-xl sm:p-4"
                 >
                   <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 sm:h-11 sm:w-11">
-                      <item.icon className="h-4.5 w-4.5 text-emerald-600 sm:h-5 sm:w-5" />
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--secondary)] sm:h-11 sm:w-11">
+                      <item.icon className="h-4.5 w-4.5 text-[var(--primary)] sm:h-5 sm:w-5" />
                     </div>
 
                     <div>
@@ -164,12 +164,12 @@ export function Hero() {
             transition={{ duration: 1 }}
             className="relative hidden min-h-[570px] lg:block"
           >
-            <div className="absolute -right-8 top-8 h-52 w-52 rounded-full bg-emerald-200/40 blur-3xl" />
-            <div className="absolute -bottom-6 -left-8 h-48 w-48 rounded-full bg-amber-200/35 blur-3xl" />
+            <div className="absolute -right-8 top-8 h-52 w-52 rounded-full bg-[var(--primary)]/18 blur-3xl" />
+            <div className="absolute -bottom-6 -left-8 h-48 w-48 rounded-full bg-[var(--gold)]/25 blur-3xl" />
 
             <div className="absolute left-6 top-4 z-20 flex items-center gap-3 rounded-full border border-white/70 bg-white/90 px-4 py-3 shadow-[0_18px_50px_rgba(15,23,42,0.12)] backdrop-blur">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100">
-                <Star className="h-5 w-5 text-emerald-600" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/15">
+                <Star className="h-5 w-5 text-[var(--gold)]" />
               </div>
               <div>
                 <p className="text-xs text-slate-500">Rated by pilgrims</p>
@@ -178,7 +178,7 @@ export function Hero() {
             </div>
 
             <div className="absolute bottom-7 right-7 z-20 flex min-h-[64px] items-center gap-3 rounded-full border border-white/70 bg-white/90 px-4 py-3 text-slate-900 shadow-[0_18px_50px_rgba(15,23,42,0.12)] backdrop-blur">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-sm font-bold text-emerald-700">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--secondary)] text-sm font-bold text-[var(--primary)]">
                 ৳
               </div>
               <div>
@@ -195,13 +195,13 @@ export function Hero() {
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/78 via-slate-950/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/18 via-transparent to-amber-300/12" />
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/18 via-transparent to-[var(--gold)]/18" />
               <div className="absolute inset-0 ring-1 ring-inset ring-white/25" />
 
               <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="max-w-sm">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 backdrop-blur-md">
-                    <div className="h-2 w-2 rounded-full bg-emerald-400" />
+                    <div className="h-2 w-2 rounded-full bg-[var(--gold)]" />
                     <span className="text-[11px] uppercase tracking-[0.22em] text-white/80">
                       Complete Journey Care
                     </span>
