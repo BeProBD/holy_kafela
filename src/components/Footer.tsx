@@ -113,6 +113,22 @@ export function Footer() {
               </a>
 
               <a
+                href="https://maps.google.com/?q=United+Tower+4+KDA+Avenue+Shib+bari+Mor+Khulna+9100+Bangladesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-2 underline decoration-white/35 underline-offset-2 transition hover:text-white"
+              >
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-white/80" />
+                <span>
+                  <span className="block text-white/85">Khulna Office</span>
+                  <span className="block">
+                    6th Floor, United Tower, 4 KDA Avenue (Shib bari Mor), Khulna 9100,
+                    Bangladesh
+                  </span>
+                </span>
+              </a>
+
+              <a
                 href="mailto:info@holykafela.com"
                 className="flex items-center gap-2 underline decoration-white/35 underline-offset-2 transition hover:text-white"
               >
